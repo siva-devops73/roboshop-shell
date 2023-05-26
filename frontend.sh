@@ -11,6 +11,9 @@ echo -e "\e[35mExtract Frontend Content\e[0m"
 cd /usr/share/nginx/html
 unzip /tmp/frontend.zip  &>>/tmp/roboshop.log
 
+echo -e "\e[35mUpdating Frontend Content\e[0m"
+cp roboshop.conf /etc/nginx/default.d/roboshop.conf  &>>/tmp/roboshop.log
+
 echo -e "\e[35mStarting Frontend Server\e[0m"
 systemctl enable nginx  &>>/tmp/roboshop.log
 systemctl restart nginx  &>>/tmp/roboshop.log
