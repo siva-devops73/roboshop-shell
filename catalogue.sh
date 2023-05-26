@@ -8,7 +8,7 @@ echo -e "\e[35mAdd Application User\e[0m"
 useradd roboshop  &>>/tmp/roboshop.log
 
 echo -e "\e[35mCreate Application Directory\e[0m"
-rm -rf/app  &>>/tmp/roboshop.log
+rm -rf /app  &>>/tmp/roboshop.log
 mkdir /app  &>>/tmp/roboshop.log
 
 echo -e "\e[35mDownload Application Content\e[0m"
