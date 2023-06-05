@@ -93,8 +93,8 @@ python() {
    app_presetup
 
    echo -e "${color} Install Application Dependencies ${nocolor}"
-   cd ${app_path}  &>>&>>${log_file}
-   pip3.6 install -r requirements.txt  &>>&>>${log_file}
+   cd ${app_path}  &>>${log_file}
+   pip3.6 install -r requirements.txt  &>>${log_file}
 
    systemd_setup
 }
