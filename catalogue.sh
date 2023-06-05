@@ -1,6 +1,6 @@
 component=${component}
-color="${color} "
-nocolor=" ${nocolor}"
+color="\e[35m"
+nocolor="\e[0m"
 
 echo -e "${color} Configuring NodeJS Repos ${nocolor}"
 curl -sL https://rpm.nodesource.com/setup_lts.x | bash  &>>/tmp/roboshop.log
