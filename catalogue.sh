@@ -1,5 +1,5 @@
 component=${component}
-color="\e[37m"
+color="\e[35m"
 nocolor="\e[0m"
 
 echo -e "${color} Configuring NodeJS Repos ${nocolor}"
