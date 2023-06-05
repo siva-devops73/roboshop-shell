@@ -1,8 +1,5 @@
+source common.sh
 component=catalogue
-color="\e[35m"
-nocolor="\e[0m"
-log_file="/tmp/roboshop.log"
-app_path="/app"
 
 
 echo -e "${color} Configuring NodeJS Repos ${nocolor}"
