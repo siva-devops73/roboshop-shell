@@ -1,13 +1,18 @@
-echo -e "\e[35mCopy Mongo repo file\e[0m"
-cp mongo.repo /etc/yum.repos.d/mongo.repo  &>>/tmp/roboshop.log
+source common.sh
 
-echo -e "\e[35mInstalling MongoDB Server\e[0m"
-yum install mongodb-org -y  &>>/tmp/roboshop.log
+echo -e "${color} Copy Mongo repo file ${nocolor}"
+cp mongo.repo /etc/yum.repos.d/mongo.repo  &>>${log_file}
+stat_check $?
 
-echo -e "\e[35mUpdating MongoDB Listen Address\e[0m"
-sed -i 's/127.0.0.1/0.0.0.0/' /etc/mongod.conf  &>>/tmp/roboshop.log
+echo -e "${color} Installing MongoDB Server ${nocolor}"
+yum install mongodb-org -y  &>>${log_file}
+stat_check $?
 
+echo -e "${color} Updating MongoDB Listen Address ${nocolor}"
+sed -i 's/127.0.0.1/0.0.0.0/' /etc/mongod.conf  &>>${log_file}
+stat_check $?
 
-echo -e "\e[35mStart MongoDB Server\e[0m"
-systemctl enable mongod   &>>/tmp/roboshop.log
-systemctl restart mongod  &>>/tmp/roboshop.log
+echo -e "${color} Start MongoDB Server ${nocolor}"
+systemctl enable mongod   &>>${log_file}
+systemctl restart mongod  &>>${log_file}
+stat_check $?
