@@ -1,6 +1,6 @@
 source common.sh
 
-echo -e ${color} Install Redis Repos ${nocolor}"
+echo -e "${color} Install Redis Repos ${nocolor}"
 yum install https://rpms.remirepo.net/enterprise/remi-release-8.rpm -y  &>>${log_file}
 stat_check $?
 
