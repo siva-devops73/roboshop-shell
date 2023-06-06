@@ -1,4 +1,4 @@
 source common.sh
-componenet=${component}
+componenet=cart
 
 nodejs
