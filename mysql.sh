@@ -4,7 +4,7 @@ echo -e "${color} Disable MySQL Default Version ${nocolor}"
 yum module disable mysql -y  &>>${log_file}
 stat_check $?
 
-echo -e "${color} Disable MySQL Default Version ${nocolor}"
+echo -e "${color} Copy MySQL Repo File ${nocolor}"
 cp /home/centos/roboshop-shell/mysql.repo /etc/yum.repos.d/mysql.repo   &>>${log_file}
 stat_check $?
 
